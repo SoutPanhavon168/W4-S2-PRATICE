@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            max-width: 1200px;
+            gap: 1rem;
+        }
+
+        .header, .footer {
+            background-color: #1e90ff;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .header {
+            box-shadow: 0 4px 8px rgba(0, 122, 234, 0.5);
+        }
+
+        .footer {
+            box-shadow: 0 4px 8px rgba(29, 68, 184, 0.5);
+        }
+
+        .content {
+            display: flex;
+            flex-grow: 1;
+            gap: 1rem;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            flex-grow: 1;
+            background-color: #3cb371;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 8px rgba(39, 103, 65, 0.5);
+        }
+
+        .item {
+            background-color: #2f8d59;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            flex: 1 1 calc(33.33% - 1rem);
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 8px rgba(34, 103, 65, 0.5);
+        }
+
+        .sidebar {
+            background-color: #ff6347;
+            color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 8px rgba(224, 34, 0, 0.5);
+            flex-shrink: 0;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">header</header>
+        <div class="content">
+            <main class="main">
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+            </main>
+            <aside class="sidebar">sidebar</aside>
+        </div>
+        <footer class="footer">footer</footer>
+    </div>
+</body>
+</html>
